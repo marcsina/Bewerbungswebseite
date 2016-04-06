@@ -28,7 +28,7 @@
     font-size: 45px;
 }
 
-.navbar-brand:hover, .navbar-brand:focus{ /*schriftfarbe ändern bei hover*/
+.navbar-header .navbar-brand:hover, .navbar-header .navbar-brand:focus{ /*schriftfarbe ändern bei hover*/
     color: #EAE6FC;
 }
 
@@ -106,7 +106,7 @@ h2{
 #aboutme, #skills, #contact{
     background-color: #EAE6FC;
 }
-#lebenslauf, #works{
+#lebenslauf, #works, #impressum{
     background-color: #D1CCD5;  
 }
 
@@ -226,8 +226,54 @@ h2{
     -o-transform:scale(1.25,1.25);
     transform:scale(1.25,1.25);
 }
+ 
+.rotate2{
+    -webkit-transition-duration: 2s;
+    -moz-transition-duration: 2s;
+    -o-transition-duration: 2s;
+    transition-duration:2s;
+     
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+     
+    overflow:hidden; /*schneidet inhalt ab, wenn es das übergeordnete element verlässt*/
+ 
+    } 
 
+.rotate2:hover 
+{
+    -webkit-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+    transform:rotate(45deg);
+}
 
+/*------------------------------------------/
+/-------------Mobilanpassung----------------/
+/------------------------------------------*/
+
+@media screen and (min-width: 601px){
+      .not_unity{
+        visibility: hidden;
+        display: none;
+    }
+    .unity{
+        visibility: visible;
+        display: inherit;
+    }
+}
+@media screen and (max-width: 600px){
+    .not_unity{
+        visibility: visible; 
+        display: inherit;
+    }
+    .unity{
+        visibility: hidden;
+        display: none;
+    }
+}
 
 
 
@@ -324,23 +370,16 @@ ELEMENT NICHT AKTIV!!!
   animation-name: animation_submit;
 }
 
-@media screen and (min-width: 601px){
-      .not_unity{
-        visibility: hidden;
-        display: none;
-    }
-    .unity{
-        visibility: visible;
-        display: inherit;
-    }
-}
-@media screen and (max-width: 600px){
-    .not_unity{
-        visibility: visible; 
-        display: inherit;
-    }
-    .unity{
-        visibility: hidden;
-        display: none;
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+

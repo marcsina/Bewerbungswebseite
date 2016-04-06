@@ -31,6 +31,6 @@ $("#contactimg").on("click", function(){
             counter=-1;
             break;
     }
-    counter++;
-    
+    counter++;  
 });
+
