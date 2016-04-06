@@ -8,8 +8,8 @@
     <title>Marc Wildermuth Bewerbung</title>
 
     
-    <link rel="shortcut icon" href="Game/TemplateData/favicon.ico"/> 
-    <script src="Game/TemplateData/UnityProgress.js"></script>
+    <link rel="shortcut icon" href="Game/TemplateData/favicon.ico"/>
+    
     
     
     <!-- Bootstrap core CSS -->
@@ -271,6 +271,12 @@
          <p class="text-center not_unity">Leider ist dieser Bereich für diese Displaygröße nicht zugänglich</p>
         
         <div class="template-wrap clear unity">
+            <!-- mobilen browser entlasten und skript nur ab bestimmten größe laden-->
+            <script>if (screen && screen.width > 480) {
+                document.write('<script src="Game/TemplateData/UnityProgress.js"><\/script>');
+            }
+            </script>
+            
             <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="900px" width="600px"></canvas>
             <div class="fullscreen"><img src="Game/TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
         </div>
@@ -286,8 +292,12 @@
 
           };
         </script>
+        <!-- mobilen browser entlasten und skript nur ab bestimmten größe laden-->
+        <script>if (screen && screen.width > 480) {
+                document.write('<script src="Game/Release/UnityLoader.js"><\/script>');
+            }
+        </script>
         
-        <script src="Game/Release/UnityLoader.js"></script>
         
     </div><!--container-->
     </div><!--works-->
